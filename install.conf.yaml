@@ -6,4 +6,10 @@
     ~/.bash_logout: bash_logout
     ~/.zshrc: zshrc
 
-
+- shell:
+  -
+    command: sudo add-apt-repository -y -u ppa:nathan-renniewaldock/flux && sudo apt install -y fluxgui
+    description: Install f.lux
+  -
+    command: sudo add-apt-repository -y -u ppa:wireshark-dev/stable && sudo apt install -y wireshark
+    description: Install Wireshark from the latest stable PPA
