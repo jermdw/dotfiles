@@ -5,7 +5,7 @@
     ~/.bashrc: bashrc
     ~/.bash_logout: bash_logout
     ~/.zshrc: zshrc
-
+    ~/.config/nvim/init.vim: init.vim 
 - shell:
   -
     command: sudo add-apt-repository -y -u ppa:nathan-renniewaldock/flux && sudo apt install -y fluxgui
