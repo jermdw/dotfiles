@@ -5,6 +5,7 @@
     ~/.bashrc: bashrc
     ~/.bash_logout: bash_logout
     ~/.zshrc: zshrc
+    force: true
     ~/.config/nvim/init.vim: init.vim 
 - shell:
   -
