@@ -1,4 +1,0 @@
-# ProTips
-
-# Extend Dell Keyboard Backlight
-sudo nano /sys/devices/platform/dell-laptop/leds/dell\:\:kbd_backlight/stop_timeout 

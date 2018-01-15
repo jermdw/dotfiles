@@ -1,16 +1,12 @@
+- defaults:
+    link:
+      relink: true
+
 - clean: ['~']
 
 - link:
-    ~/.profile: profile
-    ~/.bashrc: bashrc
-    ~/.bash_logout: bash_logout
-    ~/.zshrc: zshrc
-    force: true
-    ~/.config/nvim/init.vim: init.vim 
+    ~/.dotfiles: ''
+    ~/.tmux.conf: tmux.conf
+
 - shell:
-  -
-    command: sudo add-apt-repository -y -u ppa:nathan-renniewaldock/flux && sudo apt install -y fluxgui
-    description: Install f.lux
-  -
-    command: sudo add-apt-repository -y -u ppa:wireshark-dev/stable && sudo apt install -y wireshark
-    description: Install Wireshark from the latest stable PPA
+  - [git submodule update --init --recursive, Installing submodules]
