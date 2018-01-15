@@ -1,0 +1,21 @@
+*~
+.DS_Store
+
+*.diff
+
+*.rdb
+
+.tags
+.tags_sorted_by_file
+tags
+
+log/
+db/*.sqlite3
+
+# Ignore sensitive info in dotfiles
+priv.zsh
+
+# Ignore nvim plugin folder
+nvim/plugged/
+
+.python-version
