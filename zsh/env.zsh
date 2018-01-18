@@ -16,3 +16,4 @@ export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'" # uses tree command t
 
 # Tell grep to highlight matches
 export GREP_OPTIONS='—color=auto'
+alias rmf='rm -rf'

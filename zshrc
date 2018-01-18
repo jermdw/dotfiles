@@ -8,7 +8,7 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 export ZSH=$HOME/.oh-my-zsh
 ENABLE_CORRECTION="true"
 export PATH=/usr/local/bin:$PATH
-ZSH_THEME="agnoster" # theme
+ZSH_THEME="jerm" # theme
 DISABLE_UNTRACKED_FILES_DIRTY="true" # don't track dirty
 plugins=(git docker encode64) # plugins
 

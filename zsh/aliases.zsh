@@ -10,3 +10,4 @@ alias cls='clear'
 # Recursively remove .DS_Store files
 alias cleanupds="find . -type f -name '*.DS_Store' -ls -delete"
 alias lstime='ls -ltr'
+alias updategcp='gcloud components update'
