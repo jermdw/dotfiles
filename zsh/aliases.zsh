@@ -1,3 +1,6 @@
+# Custom Aliases
+# j3rmbadger
+
 alias vimconfig='nvim ~/.config/nvim/init.vim'
 alias zshconfig='nvim ~/.zshrc'
 alias aliasconfig='nvim ~/.oh-my-zsh/custom/aliases.zsh'
@@ -11,3 +14,4 @@ alias cls='clear'
 alias cleanupds="find . -type f -name '*.DS_Store' -ls -delete"
 alias lstime='ls -ltr'
 alias updategcp='gcloud components update'
+alias updatebrew='brew update && brew upgrade'
