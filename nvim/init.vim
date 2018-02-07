@@ -48,6 +48,9 @@ autocmd BufReadPost *
     \   exe "normal g`\"" |
     \ endif
 
+" Insert Timestamp using F2
+nnoremap <F2> a<C-R>=strftime("%c")<CR><Esc
+
 " get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
@@ -149,6 +152,9 @@ let NERDTreeAutoDeleteBuffer = 1
 " prettify nerdtree
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
+
+" Quit vim if nerdtree is remaining buffer open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " git gutter
 nmap <Leader>j <Plug>GitGutterNextHunk
