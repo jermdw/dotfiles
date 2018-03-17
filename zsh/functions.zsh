@@ -8,3 +8,6 @@ function mk() {
 function manpdf() {
  man -t "${1}" | open -f -a /Applications/Preview.app/
 }
+
+# Connect to gcloud SSH tunnel
+alias gcptunnel='gcloud compute ssh --zone us-east1-d j3rm-tunnel -- -D 8123 -f -C -q -N'

@@ -15,3 +15,6 @@ alias cleanupds="find . -type f -name '*.DS_Store' -ls -delete"
 alias lstime='ls -ltr'
 alias updategcp='gcloud components update'
 alias updatebrew='brew update && brew upgrade'
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+alias chrome-canary="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary"
+alias chromium="/Applications/Chromium.app/Contents/MacOS/Chromium"

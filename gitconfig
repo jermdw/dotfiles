@@ -1,3 +1,19 @@
 [user]
 	name = jermdw
 	email = jermdw@gmail.com
+[help]
+	autoCorrect = -1
+[pull]
+	ff = only
+[push]
+	default = current
+[log]
+	abbrevCommit = true
+	decorate = short
+[apply]
+	ignoreWhitespace = change
+[rerere]
+	enabled = true
+	autoUpdate = true
+[am]
+	threeWay = true
