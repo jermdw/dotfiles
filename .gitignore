@@ -1,3 +1,4 @@
 nvim/plugged/
 .python-version
 zsh/priv.zsh
+.nvimlog

@@ -5,13 +5,16 @@
 - clean: ['~']
 
 - link:
-    ~/.tmux.conf: tmux.conf
-    ~/.zshrc: zshrc
+    ~/.zshrc:
+      force: true
+      path: zshrc
     ~/.gitconfig: gitconfig
-    ~/.gitignore: gitignore
-    ~/.oh-my-zsh/custom: zsh
-    ~/.config/nvim: nvim
-    ~/.config/powershell: powershell
+    ~/.oh-my-zsh/custom:
+      force: true
+      path: oh-my-zsh/custom
+    ~/.config/nvim:
+      force: true
+      path: nvim
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
