@@ -1,5 +1,4 @@
 # j3rmbadger ZSH Config
-
 # Preferences
 HYPHEN_INSENSITIVE="true"
 export LANG=en_US.UTF-8
@@ -10,7 +9,7 @@ ENABLE_CORRECTION="true"
 export PATH=/usr/local/bin:$PATH
 ZSH_THEME="agnoster" # theme
 DISABLE_UNTRACKED_FILES_DIRTY="true" # don't track dirty
-plugins=(git docker encode64) # plugins
+plugins=(git docker) # plugins
 
 # Environment
 source $ZSH/oh-my-zsh.sh

@@ -5,8 +5,7 @@
 " ============================================================ 
 
 " Set Shell
-set shell=/usr/local/bin/zsh
-
+set shell=/usr/bin/zsh
 set nowrap            " don't wrap long lines
 set wildmenu          " visual autocomplete for command menu
 set autowrite         " save file before switching a buffer
@@ -19,8 +18,8 @@ set autoindent        " indent
 set showmatch         " highlight matching brackets
 
 " Explicitly set python provider
-" let g:python_host_prog  = '/usr/local/bin/python2'
-" let g:python3_host_prog = '/usr/bin/python3'
+let g:python_host_prog  = '/usr/bin/python'
+let g:python3_host_prog = '/usr/bin/python3'
 
 " Sets how many lines of history VIM has to remember
 set history=500
@@ -32,7 +31,7 @@ set numberwidth=5     " line numbers width
 " make it obvious where 120 characters is
 set textwidth=120
 set colorcolumn=+1
-set formatoptions+=w " for wraping long lines without broken words
+set formatoptions+=w " for wrapping long lines without broken words
 
 " spaces
 set tabstop=2     " tab width
@@ -226,7 +225,7 @@ syntax enable
 
 " Color Options
 set termguicolors
-set background=dark
+"set background=dark
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
@@ -307,7 +306,6 @@ let g:lasttab = 1
 nmap <Leader>tl :exe "tabn ".g:lasttab<CR>
 au TabLeave * let g:lasttab = tabpagenr()
 
-
 " Opens a new tab with the current buffer's path
 " Super useful when editing files in the same directory
 map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
@@ -324,32 +322,7 @@ endtry
 
 " Return to last edit position when opening files (You want this!)
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-"
-" Workspace Setup
-" ----------------
-function! DefaultWorkspace()
-    " Rough num columns to decide between laptop and big monitor screens
-    let numcol = 2
-    if winwidth(0) >= 220
-        let numcol = 3
-    endif
 
-    if numcol == 3
-        e term://zsh
-        file Shell\ Two
-        vnew
-    endif
-
-    vsp term://~/Programs/golang/context
-    file Context
-    sp term://zsh
-    file Shell\ One
-    wincmd k
-    resize 4
-    wincmd h
-endfunction
-command! -register DefaultWorkspace call DefaultWorkspace()
-"
 " ============================================================ 
 " => Status line
 " ============================================================ 
@@ -478,7 +451,7 @@ Plug 'terryma/vim-expand-region'                        " change visual selectio
 Plug 'mbbill/undotree'                                  " undo history tree
 Plug 'nathanaelkane/vim-indent-guides'                  " indent columns
 Plug 'chrisbra/csv.vim'                                 " csv helper
-Plug 'SirVer/ultisnips'
+"Plug 'SirVer/ultisnips'
 "Plug 'Shougo/neosnippet.vim'
 " navigation
 Plug 'scrooloose/nerdtree'                              " file tree
