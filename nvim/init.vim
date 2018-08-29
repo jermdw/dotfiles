@@ -1,9 +1,7 @@
 " j3rmbadger NeoVim init.vim / .vimrc
-"
 " ============================================================ 
 " General / Environment / NeovimConfig
 " ============================================================ 
-
 " Set Shell
 set shell=/usr/bin/zsh
 set nowrap            " don't wrap long lines
@@ -49,7 +47,6 @@ autocmd BufReadPost *
 
 " Insert Timestamp using F2
 nnoremap <F2> a<C-R>=strftime("%c")<CR><Esc
-
 " get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
@@ -58,9 +55,9 @@ nnoremap <Down> :echoe "Use j"<CR>
 
 " neovim terminal by Alt + d
 nnoremap ∂ :belowright vsplit \| edit term://zsh \| set hidden<CR>
-  " highlight trailing whitespaces
-  autocmd InsertLeave * hi ExtraWhitespace ctermbg=172 guifg=#d78700
-  autocmd InsertEnter * hi ExtraWhitespace NONE
+" highlight trailing whitespaces
+autocmd InsertLeave * hi ExtraWhitespace ctermbg=172 guifg=#d78700
+autocmd InsertEnter * hi ExtraWhitespace NONE
 
 " Enable filetype plugins
 filetype plugin on
@@ -82,10 +79,9 @@ nmap <leader>q :q<cr>
 " :W sudo saves the file 
 " (useful for handling the permission-denied error)
 command W w !sudo tee % > /dev/null
-
+ 
 " run FZF by using Alt + P
 nnoremap π "_:FZF<CR>
-set rtp+=/usr/local/opt/fzf
 
 " search with CtrlSF
 nnoremap <C-f> "_:CtrlSF 
@@ -194,9 +190,7 @@ set whichwrap+=<,>,h,l
 " Ignore case when searching
 set ignorecase
 
-" When searching try to be smart about cases 
-set smartcase
-
+set smartcase " When searching try to be smart about cases 
 " Highlight search results
 set hlsearch
 
@@ -225,7 +219,7 @@ syntax enable
 
 " Color Options
 set termguicolors
-"set background=dark
+set background=dark
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
@@ -240,24 +234,19 @@ set ffs=unix,dos,mac
 set nobackup
 set nowb
 set noswapfile
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use spaces instead of tabs
 set expandtab
-
 " Be smart when using tabs ;)
 set smarttab
-
 " 1 tab == 4 spaces
 set shiftwidth=4
 set tabstop=4
-
 " Linebreak on 500 characters
 set lbr
 set tw=500
-
 set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
@@ -403,6 +392,11 @@ function! VisualSelection(direction, extra_filter) range
     let @" = l:saved_reg
 endfunction
 
+" Snippet Helpers
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
 " ============================================================
 " Vim-Go Helpers
 " ============================================================
@@ -451,22 +445,21 @@ Plug 'terryma/vim-expand-region'                        " change visual selectio
 Plug 'mbbill/undotree'                                  " undo history tree
 Plug 'nathanaelkane/vim-indent-guides'                  " indent columns
 Plug 'chrisbra/csv.vim'                                 " csv helper
-"Plug 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips'                                 " snippets
+Plug 'honza/vim-snippets'                             " snippet engine
 "Plug 'Shougo/neosnippet.vim'
 " navigation
 Plug 'scrooloose/nerdtree'                              " file tree
 Plug 'dyng/ctrlsf.vim'                                  " better text search
 Plug 'kopischke/vim-fetch'                              " open file with line and column number
 Plug 'yegappan/mru'                                     " most recently used files
-Plug 'junegunn/fzf' " fuzzy search
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " files
 Plug 'tpope/vim-eunuch'                                 " helpers for UNIX shell commands (mkdir, rename, etc.)
 " git
 Plug 'tpope/vim-fugitive'                               " git commands
 Plug 'airblade/vim-gitgutter'                           " git gutter
 " js / jsx / html
-Plug 'othree/yajs.vim', { 'for': [] }                   " javascript
-Plug 'mxw/vim-jsx', { 'for': [] }                       " jsx
 Plug 'valloric/MatchTagAlways', { 'for': ['html', 'javascript.jsx'] } " highlight match tags
 " syntax / languages
 " Plug 'suan/vim-instant-markdown', { 'for': 'markdown' } " real time markdown editing
