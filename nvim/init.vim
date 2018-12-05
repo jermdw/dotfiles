@@ -83,6 +83,9 @@ command W w !sudo tee % > /dev/null
 " run FZF by using Alt + P
 nnoremap π "_:FZF<CR>
 
+" j3rm - cut / delete line into 'a' register; doesn't overwrite clipboard register so you can paste
+nmap <leader>d "add<cr>
+
 " search with CtrlSF
 nnoremap <C-f> "_:CtrlSF 
 let g:ctrlsf_case_sensitive = 'no'

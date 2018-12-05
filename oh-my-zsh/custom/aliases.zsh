@@ -19,3 +19,10 @@ alias clean='sudo apt autoremove -y'
 alias cls='clear'
 alias dirsize='du -d 1 -h'
 alias ldir='ls -al | grep ^d'
+
+# System Information
+alias mem='free -h'
+alias disk='df -h'
+
+# Git
+alias gc='git clone'
